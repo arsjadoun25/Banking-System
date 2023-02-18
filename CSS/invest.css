@@ -1,0 +1,93 @@
+/* Set default font family and size */
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+}
+
+/* Style header */
+header {
+	background-color: #003366;
+	color: #FFFFFF;
+	padding: 10px;
+}
+
+header h1 {
+	margin: 0;
+}
+
+/* Style navigation */
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav ul li:last-child {
+	margin-right: 0;
+}
+
+nav ul li a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	color: #CCCCCC;
+}
+
+/* Style sections */
+section {
+	margin: 50px 0;
+}
+
+section h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+section p {
+	margin-bottom: 20px;
+}
+
+section ul {
+	margin-bottom: 20px;
+}
+
+section li {
+	margin-bottom: 10px;
+}
+
+section li strong {
+	display: block;
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+/* Style contact section */
+#contact {
+	background-color: #F0F0F0;
+	padding: 20px;
+}
+
+#contact p {
+	margin-bottom: 10px;
+}
+
+#contact p:last-child {
+	margin-bottom: 0;
+}
+
+/* Style links */
+a {
+	color: #003366;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
