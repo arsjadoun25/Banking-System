@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Add Customer - Bank</title>
+    <link rel="stylesheet" href="addcust.css">
+  </head>
+  <body>
+    <script>
+        const nameInput = document.getElementById("name");
+        const balanceInput = document.getElementById("balance");
+        const submit = document.getElementById("myButton");
+      
+        nameInput.addEventListener("input", checkForm);
+        balanceInput.addEventListener("input", checkForm);
+      
+        function checkForm() {
+          if (nameInput.value && balanceInput.value) {
+            submitBtn.removeAttribute("enabled");
+          } else {
+            submitBtn.setAttribute("disabled", "disabled");
+          }
+        }
+      
+        submitBtn.addEventListener("click", function(event) {
+          if (!nameInput.value || !balanceInput.value) {
+            alert("Please fill the required fields");
+            event.preventDefault();
+          }
+        });
+      </script>
+      
+        </script>
+    <h1>Join US</h1>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="balance">Initial Balance:</label>
+      <input type="number" id="balance" name="balance" required>
+
+      <button id="myButton" type="submit" >Join</button>
+
+    </form>
+  </body>
+</html>
