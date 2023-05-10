@@ -1,0 +1,71 @@
+/* CSS for login page */
+body {
+  background-image: url("regularguy-eth-RcvQHQB9zgA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.back-button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #eee;
+}
+
+
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  width: 400px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  background-color: #ccc6c6;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.login-form button {
+  background-color: #28292a;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.login-form button:hover {
+  background-color: #050505;
+}
+
+.login-form input:focus {
+  background-color: #b9b6b6;
+  border: solid 2px #4a4b4a;
+  outline: none;
+}

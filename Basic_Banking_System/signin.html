@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="./CSS/login.css">
+	<button class="back-button" onclick="goBack()">Back</button>
+</head>
+<body>
+	<div class="login-page">
+		<div class="form">
+			<form class="login-form">
+				<label for="name">Email:</label>
+				<input type="text" id="email"/>
+				<label for="name">Password:</label>
+				<input type="password" id="password"/>
+				<button id="login-button" onclick="login()">login</button>
+			</form>
+		</div>
+	
+	</div>
+
+	<script src="./JS/login.js"></script>
+	<script>
+		function goBack() {
+			window.history.back();
+		}
+	</script>
+</body>
+</html>

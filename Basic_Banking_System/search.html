@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Program</title>
+	<style>
+		body {
+  background-image: url(micheile-henderson-lZ_4nPFKcV8-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 400px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 700px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.2); /* Adjust the alpha value to control transparency */
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+th {
+	background-color: rgba(92, 42, 36, 0.486); /* Adjust the alpha value to control transparency */
+
+  font-weight: bold;
+}
+
+	</style>
+	<button class="back-button" onclick="goBack()">Back</button>
+</head>
+<body>
+	<div class="container">
+		<h1>Search Member</h1>
+		<input type="text" id="searchInput" placeholder="Search for names...">
+		<table id="searchResults">
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+			</tr>
+		</table>
+	</div>
+
+	<script>
+		// Define the database
+		const database = [
+		    { id: 1, name: "Shakshi" },
+		    { id: 2, name: "Riya" },
+		    { id: 3, name: "Moni" },
+		    { id: 4, name: "Kartik" },
+		    { id: 5, name: "Rahul" }
+		];
+
+		// Get references to the search input field and the search results table
+		const searchInput = document.getElementById('searchInput');
+		const searchResults = document.getElementById('searchResults');
+
+		// Add an event listener to the search input field to listen for changes
+		searchInput.addEventListener('input', function() {
+			// Clear the search results table
+			searchResults.innerHTML = '<tr><th>ID</th><th>Name</th></tr>';
+
+			// Get the search query
+			const query = searchInput.value.trim().toLowerCase();
+
+			// Filter the database by the search query
+			const results = database.filter(function(item) {
+				return item.name.toLowerCase().includes(query);
+			});
+
+			// Loop through the search results and add them to the table
+			results.forEach(function(item) {
+				const row = searchResults.insertRow(-1);
+				const idCell = row.insertCell(0);
+				const nameCell = row.insertCell(1);
+				idCell.innerHTML = item.id;
+				nameCell.innerHTML = item.name;
+			});
+		});
+	</script>
+	<script>
+		function goBack() {
+			window.history.back();
+		}
+	</script>
+</body>
+</html>

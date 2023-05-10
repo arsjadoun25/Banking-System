@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer Database</title>
+	<link rel="stylesheet" href="./CSS/transfer.css">
+  <button class="back-button" onclick="goBack()">Back</button>
+</head>
+<body style="background-color: rgb(69, 70, 65);">
+	<header>
+		<h1>Customer Database</h1>
+	</header>
+
+	<table id="customer-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Customers will be added dynamically -->
+        </tbody>
+      </table>
+      
+    <script src="./JS/transfer.js"></script>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+</body>
+</html>

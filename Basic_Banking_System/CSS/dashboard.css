@@ -1,0 +1,257 @@
+/*General styles*/
+  a {
+	text-decoration: none;
+  }
+  
+  ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  /* Header styles */
+  header {
+	background-color: #004d99;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+  }
+  
+  header nav ul {
+	display: flex;
+  }
+  
+  header nav li {
+	margin-right: 20px;
+  }
+  
+  header nav li:last-child {
+	margin-right: 0;
+  }
+  
+  header nav a {
+	color: #fff;
+  }
+  
+  header h1 {
+	display: flex;
+	align-items: center;
+  }
+  
+  header h1 span {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-right: 10px;
+  }
+
+/* Dashboard Page Styles */
+
+.dashboard-page {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120px;
+}
+
+#user-info {
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha value for transparency */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  width: 70%;
+}
+
+
+#user-info h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+#user-info p {
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.user-actions {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 25%;
+}
+
+.user-actions h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.user-actions ul {
+  padding: 0;
+}
+
+.user-actions li {
+  margin-bottom: 10px;
+}
+
+.user-actions ul li {
+  margin-bottom: 20px; /* Add margin-bottom to create space between links */
+}
+
+.user-actions ul li a {
+  display: block;
+  padding: 5px 10px;
+  background-color: #0452ac;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.user-actions ul li a:hover {
+  background-color: #070707;
+}
+
+/* CSS in dashboard.css */
+.admin-link {
+  color: #6aaaf3; /* Set the text color */
+  text-decoration: none; /* Remove underline */
+  padding: 5px 20px; /* Add padding around the links */
+  margin-right: 10px; /* Add right margin between the links */
+  background-color: #070707; /* Set the background color */
+  border-radius: 15px; /* Add rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+.admin-link:hover {
+  color: #070707;
+  background-color: #fdfcfc; /* Change the background color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+#section2{
+/* Set default font family and size */
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	background-image: url(towfiqu-barbhuiya-joqWSI9u_XM-unsplash.jpg);
+	background-position: center;
+  background-size: cover;
+	color:#050505;
+}
+
+/* Style header */
+header {
+	background-color: #003366;
+	color: #FFFFFF;
+	padding: 10px;
+}
+
+header h1 {
+	margin: 0;
+}
+
+/* Style navigation */
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav ul li:last-child {
+	margin-right: 0;
+}
+
+nav ul li a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	color: #CCCCCC;
+}
+
+/* Style sections */
+section {
+	margin: 50px 0;
+}
+
+section h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+section p {
+	margin-bottom: 20px;
+}
+
+section ul {
+	margin-bottom: 20px;
+}
+
+section li {
+	margin-bottom: 10px;
+}
+
+section li strong {
+	display: block;
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+/* Style contact section */
+#contact {
+	padding: 20px;
+}
+
+#contact p {
+	margin-bottom: 10px;
+}
+
+#contact p:last-child {
+	margin-bottom: 0;
+}
+
+/* Style links */
+a {
+	color: #003366;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    flex-direction: column;
+  }
+
+  #user-info {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .user-actions {
+    width: 100%;
+  }
+}

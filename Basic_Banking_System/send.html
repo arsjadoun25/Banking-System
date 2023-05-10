@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Money Transfer App</title>
+  <link rel="stylesheet" href="./CSS/send.css">
+  <button class="back-button" onclick="goBack()">Back</button>
+</head>
+<body>
+  <h1>Transfer Money</h1>
+  <div id="sender-container">
+    <label id="sender-label" for="sender">Sender:</label>
+    <span id="sender-name"></span>
+  </div>
+  <form>
+    <label for="receiver">Receiver:</label>
+    <select id="receiver" name="receiver">
+      <!-- options for receiver -->
+    </select>
+    <br>
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount" min="1">
+    <br>
+    <button type="submit" id="transfer-btn">Transfer</button>
+  </form>
+  <div id="transactions">
+    <h2>Transactions</h2>
+    <ul id="transaction-list"></ul>
+  </div>
+  <script src="./JS/send.js"></script>
+  <script>
+		function goBack() {
+			window.history.back();
+		}
+	</script>
+</body>
+</html>

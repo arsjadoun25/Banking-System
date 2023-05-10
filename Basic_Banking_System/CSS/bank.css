@@ -1,0 +1,76 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(rupixen-com-XNtPrVGo3cU-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fcfcfc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #050505;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #050505;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    color: #050505;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  /* Footer styles */
+  #footer {
+    color: #050505;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  #links ul {
+    list-style: none; /* Remove default list style */
+  }
+  
+  #links li {
+    margin-bottom: 10px; /* Add spacing between links */
+  }
+  
+
+  #footer a {
+    margin-right: 10px;
+  }
+  
+  
+  .social-icon {
+    font-size: 18px;
+    margin: 0 5px;
+    color: #050505;
+  }
+
+  .social-icon:hover{
+    color: green;
+  }
+
+  

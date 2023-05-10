@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="./CSS/dashboard.css">
+</head>
+<body style="background-image: url(micheile-henderson-lZ_4nPFKcV8-unsplash.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
+
+  <!-- Took code from Start.html -->
+  
+  <header>
+    <nav>
+      <ul>
+        <li><a href="bank.html">About Us</a></li>
+        <li><a href="invest.html">Investment</a></li>
+      </ul>
+    </nav>
+    <h1>
+      <span style="font-family: Arial; text-align: left;">TSF</span>    
+      <img src="./IMG/logo for website.png" width="90px" height="90px">
+    </h1>
+  </header>
+
+  <section id="section1">
+  <div class="dashboard-page">
+    <div id="user-info">
+      <!-- User info will be dynamically added here by JavaScript -->
+    </div>
+    <div class="user-actions">
+      <h2>Actions</h2>
+      <ul>
+        <li><a href="send.html">Transfer Money</a></li>
+        <li><a href="Start.html">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+  </section>
+
+  <section id="section2">
+      <!--invest.html--> 
+    <title>Investment Banking - Bank Name</title>
+    <link rel="stylesheet" type="text/css" href="./CSS/invest.css">
+      <header>
+      <h1>Investment Banking</h1>
+      <nav>
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="overview">
+        <h2>Overview</h2>
+        <p>TSF Bank's investment banking division provides a range of financial services to corporations, governments, and institutions. Our team of experienced professionals delivers innovative solutions and expert advice to help our clients achieve their strategic objectives.</p>
+        <p>We offer a range of services, including:</p>
+        <ul>
+          <li>Equity and debt underwriting</li>
+          <li>Mergers and acquisitions advisory</li>
+          <li>Restructuring and recapitalization</li>
+          <li>Private placements</li>
+          <li>Financial restructuring</li>
+        </ul>
+      </section>
+      
+      <section id="services">
+        <h2>Our Services</h2>
+        <p>TSF Bank's investment banking division offers a comprehensive range of services to meet our clients' needs:</p>
+        <ul>
+          <li><strong>Equity and Debt Underwriting:</strong> Our team provides underwriting services for equity and debt securities offerings. We work closely with our clients to ensure successful and cost-effective transactions.</li>
+          <li><strong>Mergers and Acquisitions Advisory:</strong> We provide advisory services for mergers, acquisitions, divestitures, and other corporate transactions. Our team provides expert analysis and advice to help our clients make informed decisions.</li>
+          <li><strong>Restructuring and Recapitalization:</strong> We provide restructuring and recapitalization services to help our clients optimize their capital structures and improve their financial performance.</li>
+          <li><strong>Private Placements:</strong> Our team provides private placement services to help our clients raise capital from institutional and accredited investors.</li>
+          <li><strong>Financial Restructuring:</strong> We provide financial restructuring services to help distressed companies and their stakeholders achieve a successful restructuring.</li>
+        </ul>
+      </section>
+      
+      <section id="team">
+        <h2>Our Team</h2>
+        <p>Our investment banking team is composed of experienced professionals with a deep understanding of the industry and the markets we serve. Our team includes:</p>
+        <ul>
+          <li>Managing Directors</li>
+          <li>Vice Presidents</li>
+          <li>Associates</li>
+          <li>Analysts</li>
+        </ul>
+      </section>
+      
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to learn more about our investment banking services, please don't hesitate to contact us.</p>
+        <p>Phone: XXX-XXX-XXXX</p>
+        <p>Email: investmentbanking@tsfbank.com</p>
+        <p>Address: XXXXXXXXXXXXXXXXXX</p>
+      </section>
+    </main>
+  </section>
+
+  <script>
+    const users = [
+      { id: 1, name: 'Shakshi', email: 'shaksh23@gmail.com', phone: '4665xxx32', balance: '35000' },
+      { id: 2, name: 'Riya', email: 'ri25@gmail.com', phone: '87875xxx19', balance: '52000' },
+      { id: 3, name: 'Moni', email: 'mni2133@gmail.com', phone: '65712xxx90', balance: '4500' },
+      { id: 4, name: 'Kartik', email: 'krti44@gmail.com', phone: '78965xxx32', balance: '43000' },
+      { id: 5, name: 'Rahul', email: 'rhl69@gmail.com', phone: '522341xxx88', balance: '25000' }
+    ];
+
+    const userEmail = localStorage.getItem('userEmail'); // Move this line after its definition
+    const user = users.find(function(user) {
+      return user.email === userEmail;
+    });
+
+    if (user) {
+      const userInfo = document.querySelector("#user-info");
+
+      // Create HTML elements to display the user's information
+      const heading = document.createElement("h2");
+      heading.textContent = "Welcome, " + user.name + "!";
+      userInfo.appendChild(heading);
+
+      const email = document.createElement("p");
+      email.textContent = "Email: " + user.email;
+      userInfo.appendChild(email);
+
+      const phone = document.createElement("p");
+      phone.textContent = "Phone: " + user.phone;
+      userInfo.appendChild(phone);
+
+      const balance = document.createElement("p");
+      balance.textContent = "Balance: Rs " + user.balance;
+      userInfo.appendChild(balance);
+      if (user.name === "Riya") {
+        const searchLink = document.createElement("a");
+        searchLink.textContent = "Search";
+        searchLink.href = "search.html";
+        searchLink.classList.add("admin-link");
+        userInfo.appendChild(searchLink);
+
+        userInfo.appendChild(document.createTextNode(" "));
+        
+        const memberLink = document.createElement("a");
+        memberLink.textContent = "Members";
+        memberLink.href = "transfer.html";
+        memberLink.classList.add("admin-link");
+        userInfo.appendChild(memberLink);
+
+        userInfo.style.marginRight = "10px";
+      }
+    }else {
+      // user not found in the array, redirect to login page
+      alert("User not found!!");
+      window.location.href = "signin.html";
+    }
+  </script>
+</body>
+</html>

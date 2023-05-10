@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Add Customer - Bank</title>
+    <link rel="stylesheet" href="./CSS/addcust.css">
+    <button class="back-button" onclick="goBack()">Back</button>
+  </head>
+  <body>
+    <h1>Join Us</h1>
+    <form id="join-form" action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="balance">Initial Balance:</label>
+      <input type="number" id="balance" name="balance" required>
+
+      <button id="join-btn" type="submit">Join</button>
+    </form>
+    <script>
+      const form = document.getElementById("join-form");
+      const nameInput = document.getElementById("name");
+      const balanceInput = document.getElementById("balance");
+      const joinBtn = document.getElementById("join-btn");
+
+      form.addEventListener("submit", function(event) {
+        if (!nameInput.value || !balanceInput.value) {
+          alert("Please enter your name and initial balance.");
+          event.preventDefault();
+        } else if (balanceInput.value < 100) {
+          alert("Your initial balance must be at least $100.");
+          event.preventDefault();
+        } else {
+          alert("Welcome to our bank, " + nameInput.value + "!");
+        }
+      });
+      function goBack() {
+			window.history.back();
+		}
+    </script>
+  </body>
+</html>

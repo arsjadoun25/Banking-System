@@ -1,0 +1,81 @@
+  body {  
+    background-image: url("regularguy-eth-RcvQHQB9zgA-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #CCCCCC;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #CCCCCC;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus {
+    border-color: #4CAF50;
+  }
+  
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #28292a;
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #070707;
+  }
+  
+  button[type="submit"]:active {
+    background-color: #3E8E41;
+    transform: translateY(1px);
+  }
+  
+  .back-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #FFFFFF;
+    color: #4CAF50;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .back-btn:hover {
+    text-decoration: underline;
+  }
+  
